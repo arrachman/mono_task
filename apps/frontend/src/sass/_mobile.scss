@@ -1,0 +1,62 @@
+@media (max-width: $mobile) {
+    .top-navbar{
+        padding: 10px 20px 10px 20px !important;
+    }
+
+    .menu-navbar{
+    }
+
+    .pull{
+        margin-top:-10px !important;
+    }
+
+    .submenu{
+        .horizontal-menu{
+            .title{
+                padding: 10px 22px 0px 22px;
+            }
+
+            ul{
+                padding: 10px 0px 10px 15px;
+            }
+        }
+    }
+
+    .content{
+        padding:0px !important;
+        margin-top:20px;
+        margin-bottom:20px;
+
+        .title{
+            padding:0px 15px 0px 15px;
+        }
+    }
+
+    /*======================= Components ============================ */
+
+    .row{
+        margin-right: 0px !important;
+        margin-left: 0px !important;
+
+        .custom-col{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        .col-box{
+            padding:10px;
+        }
+    }
+
+    .custom-row{
+        margin-bottom:0px;
+    }
+    /*======================= Components ============================ */
+
+    /* pages */
+    .mail-table{
+        td{
+            font-size:$small-font-size - 2 !important;
+        }
+    }
+}

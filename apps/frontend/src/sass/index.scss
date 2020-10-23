@@ -1,0 +1,720 @@
+//import
+@import './_colors.scss';
+@import './_variables.scss';
+@import './_dekstop.scss';
+@import './_tablet.scss';
+@import './_mobile.scss';
+@import './_menu.scss';
+
+//react big calendar styling
+@import 'react-big-calendar/lib/sass/styles';
+
+@import './_calendar.scss';
+
+//theming bootstrap color
+$theme-colors: (
+  primary: $primary,
+  success: $success,
+  danger: $danger,
+  warning: $warning,
+  info: $info,
+);
+//import bootstrap to replace
+@import 'bootstrap/scss/bootstrap.scss';
+
+//import components styling
+@import './_components.scss';
+
+// common css
+body{
+    background-color: $background-color;
+}
+
+.logo{
+    max-height:12px;
+    margin-top:10px 0px 10px 0px;
+}
+
+.header-logo-container{
+    padding:30px 0px 30px 0px;
+    
+    .header-logo{
+        width:100px;
+        margin:0 auto;
+    }
+
+    .header-logo-text{
+        margin-top:10px;
+        font-size:$default-font-size;
+    }
+}
+
+.add-spaces{
+    >.custom-button,
+    >.custom-badge{
+        margin-right:10px;
+        margin-bottom: 10px;
+    }
+
+    .custom-icon-card,
+    .custom-user-card{
+        margin-bottom: 10px;
+    }
+}
+
+.help{
+    font-size:$small-font-size;
+    margin-bottom: 10px;
+}
+
+.m-r-20{
+    margin-right: 20px !important;
+}
+
+.m-t-10{
+    margin-top: 10px !important;
+}
+
+.m-l-10{
+    margin-left: 10px !important;
+}
+
+.m-b-10{
+    margin-bottom: 10px !important;
+}
+
+.m-r-10{
+    margin-right: 10px !important;
+}
+
+.m-t-5{
+    margin-top: 5px !important;
+}
+
+.m-b-5{
+    margin-bottom: 5px !important;
+}
+
+.m-r-5{
+    margin-right: 5px !important;
+}
+
+.m-b-20{
+    margin-bottom:20px !important;
+}
+
+.content{
+    padding:20px 0px 20px 0px;
+    margin-bottom: 40px;
+
+    .title{
+        font-size:$huge-font-size;
+
+        .sub-title{
+            font-size: $default-font-size;
+            color: darken($gray, 50%);
+            margin-top:-5px; 
+        }
+    }
+
+    .body{
+        margin:20px 0px 20px 0px;
+    }
+}
+
+//link
+.link{
+    color: $blue !important;
+    text-decoration: none;
+    font-size: $default-font-size;
+    cursor: pointer;
+}
+
+.center{
+    text-align: center !important;
+}
+
+/* Top navigation bar styling, notification ,messages search & profile */
+.top-navbar{
+    background-color: $navbar-color !important;
+    font-size: $default-font-size;
+    padding: 0px 20px 0px 20px;
+    border-bottom: 0.5px solid darken($gray,10%);
+    z-index:1021;
+
+    .navbar-nav{
+        li{
+            margin-left:15px;
+        }
+    }
+
+    .no-arrow{
+        .dropdown-toggle:after{
+            content: none !important;
+        }
+    }
+
+    .notification{
+        margin-top: 5px;
+
+        .total-notification{
+            position: absolute;
+            background-color:$default-color;
+            border-radius: 10px;
+            text-align: center;
+            padding: 0px 5px 0px 5px;
+            font-size:8pt;
+            margin-top:-10px !important;
+            margin-left:-5px !important;
+            color:$white;
+            font-weight: lighter;
+        }
+
+        i{
+            color : $black;
+        }
+
+        .notification-section, .message-section{
+            padding:10px;
+
+            .container-title{
+                margin: 0px 10px 0px 10px;
+                padding-bottom: 10px;
+                font-weight: lighter;
+                border-bottom: 1px solid $gray;
+            }
+
+            
+        }
+    }
+}
+
+//side nav notification
+#notificationNav, #messageNav{
+    .notification-item{
+        cursor: pointer;
+        padding:20px;
+        border-bottom:0.5px solid darken($gray,10%);
+
+        img{
+            max-width:50px;
+            max-height:50px;
+        }
+
+        .media-body{
+            padding-left:10px;
+            margin-top:-5px;
+
+            .title{
+                font-size:$default-font-size;
+                font-weight: 400;
+            }
+            .description{
+                font-size:$small-font-size;
+                font-weight: 300;
+            }
+            .time{
+                text-align: right;
+                font-size:$small-font-size;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.pull{
+    margin-top:-20px;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    right: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: $side-nav;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* transition effect to slide in the sidenav */
+    border-left:1px solid darken($gray, 10%);
+
+    .sidenav-title{
+        position: absolute;
+        top:0;
+        padding:20px 20px 10px 20px;
+    }
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: $dark-gray;
+}
+
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 26px;
+    margin-left: 50px;
+}
+
+/* custom dropdown menu navbar styling */
+.nav-item{
+    &.dropdown{
+        .dropdown-menu{
+            padding:10px;
+
+            .dropdown-item{
+                font-size: $default-font-size;
+                padding:10px 30px 10px 30px;
+            }
+        }
+    }
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 45px;}
+}
+
+//spin animation
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg);}}
+
+//shake animation
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-0.5px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(1px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+//float animation
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+/*======================= Page ============================ */
+.pricing{
+    text-align: center;
+
+    &:hover{
+        cursor: pointer;
+
+        .pricing-cost{
+            font-size: $large-font-size + 3;
+            font-weight: 600;
+        }
+    }
+
+    .pricing-icon{
+        background-color:$default-color;
+        border-radius: 25px;
+        width:50px;
+        height:50px;
+        font-size: $large-font-size;
+        margin: 0 auto;
+
+        i{
+            color:$white;
+            margin-top:15px;
+        }
+    }
+
+    .pricing-title{
+        font-size: $default-font-size;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    .pricing-desc{
+        font-size: $small-font-size;
+        margin-top:10px;
+        margin-bottom:10px;
+        color:$dark-gray;
+    }
+    .pricing-cost-label{
+        font-size: $large-font-size - 5;
+    }
+    .pricing-cost{
+        font-size: $large-font-size;
+        font-weight: 600;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+    }
+}
+
+.faq{
+    .card{
+        border: 0px !important;
+
+        .card-header{
+            background: $white !important;
+            margin-bottom:0px !important;
+        }
+    }
+}
+
+.mailing-menu{
+    list-style: none;
+    padding: 10px 0px 0px 0px;
+    li{
+        padding: 5px 5px 5px 5px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $gray;
+            a{
+                text-decoration: none;
+            }
+        }
+
+        a{
+            color:$black;
+            font-size: $default-font-size;
+
+            .menu-badge{
+                float:right;
+                margin-top:3px;
+            }
+
+            i{
+                margin-right:10px;
+            }
+
+            
+        }
+    }
+}
+
+.mail-table{
+    tr{
+        cursor: pointer;
+
+        &.read{
+            background-color: $gray;
+        }
+    }
+    .checkbox{
+        width:20px !important;
+
+        .checkbox-custom {
+            margin-top:2px;
+        }
+    }
+    .name{
+        width:100px;
+    }
+    .subject{
+        width:200px;
+        font-weight: 350;
+    }
+    .message{
+        font-weight: 350;
+        color:$dark-gray;
+        width:300px;
+    }
+    .star{
+        width:20px;
+
+        i{
+            color: darken($warning, 10%);
+        }
+    }
+    .date{
+        width:50px;
+        font-size: $default-font-size - 2;
+        text-align: right;
+    }
+}
+
+.article{
+    cursor: pointer;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+
+    &:hover{
+        background-color: $gray;
+    }
+
+    .article-body{
+        padding:0px 5px 0px 5px !important;
+    }
+
+    .article-title{
+        font-size: $default-font-size;
+        font-weight: 550;
+    }
+    .article-slug{
+        font-size: $small-font-size;
+        color:$dark-gray;
+    }
+    .article-date{
+        text-align: right;
+        color:lighten($dark-gray, 20%);
+        font-size: $small-font-size - 1;
+    }
+
+    .info{
+        list-style: none;
+        padding:0px;
+        li{
+            float: left;
+            font-size:$small-font-size;
+            margin-right:10px;
+            .icon{
+                margin-right:3px;
+            }
+        }
+    }
+}
+
+.comment{
+    cursor: pointer;
+    padding-top:10px !important;
+    padding-bottom:10px !important;
+
+    &:hover{
+        background-color: $gray;
+    }
+
+    .comment-body{
+        padding:0px 5px 0px 5px !important;
+    }
+
+    .comment-name{
+        font-size: $default-font-size;
+        font-weight: 550;
+    }
+    .comment-text{
+        font-size: $small-font-size;
+        color:$dark-gray;
+    }
+    .comment-date{
+        text-align: right;
+        color:lighten($dark-gray, 20%);
+        font-size: $small-font-size - 1;
+    }
+
+    .info{
+        list-style: none;
+        padding:0px;
+        li{
+            float: left;
+            font-size:$small-font-size;
+            margin-right:10px;
+            .icon{
+                margin-right:3px;
+            }
+        }
+    }
+}
+
+.error-page{
+    text-align: center;
+    margin-top:50px;
+    margin-bottom:50px;
+
+    .error-icon{
+        width: 50px;
+        height: 50px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        background-color: $default-color;
+        color:$white;
+        font-size:20pt;
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+        transform: translatey(0px);
+        animation: float 4s ease-in-out infinite;
+        padding-top:3px;
+        margin-bottom: 20px;
+    }
+}
+
+.todo-labels{
+    list-style: none;
+    padding:0px;
+    li{
+        font-size:$default-font-size;
+        line-height: 30px;
+        padding:0px 5px 0px 5px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $default-color;
+            color:$white;
+        }
+    }
+}
+
+.todo-item{
+    cursor: pointer;
+    margin-bottom: 0px;
+    padding: 15px 20px 15px 20px !important;
+
+    &.done{
+        background-color: $default-color;
+        color:$white;
+
+        .complete{
+            .text-label{
+                color:$white;
+            }
+        }
+
+        .todo-actions{
+            li{
+                color:darken($gray, 5%);
+                float:right;
+                margin-left:10px;
+    
+                &:hover{
+                    color:darken($gray, 0%);
+                }
+            }
+        }
+    }
+
+    .todo-title{
+        font-size: $default-font-size;
+    }
+
+    .todo-description{
+        font-size: $small-font-size;
+    }
+
+    .complete{
+        .label{
+            color:$success;
+            font-size:$small-font-size;
+        }
+    }
+
+    .todo-actions{
+        list-style: none;
+        padding:0px;
+
+        li{
+            color:darken($gray, 40%);
+            float:right;
+            margin-left:10px;
+
+            &:hover{
+                color:darken($gray, 50%);
+            }
+        }
+    }
+}
+
+/*======================= Page ============================ */
+
+/*===================== Documentation ======================*/
+.documentation-navigations{
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0px;
+
+    li{
+        a{
+            transition: 0.2s;
+            display:block;
+            align-items: stretch;
+            font-size: $default-font-size;
+            border-radius: 3px;
+            padding:5px 10px 5px 10px;
+            color:$black;
+
+            &:hover, &:active,&:focus{
+                text-decoration: none;
+                background-color: $primary;
+                color:$white;
+            }
+        }
+    }
+}
+
+.example{
+    $bg-color:#3e363f;
+    margin-bottom:50px;
+    .label{
+        font-size:$large-font-size;
+        margin-bottom:10px;
+    }
+
+    .preview{
+        border:1px solid darken($gray, 5%);
+
+        .result{
+            padding:20px;
+        }
+    
+        .code{
+            padding:10px;
+            background-color:$bg-color !important;
+            pre{
+                background-color:$bg-color !important;
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .properties{
+        margin-top:10px;
+        pre{
+            padding:10px !important;
+            background-color:$bg-color !important;
+            margin-bottom: 0px;
+        }
+    }
+}
+/*===================== Documentation ======================*/
